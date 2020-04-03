@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="{% static 'indsearch/css/main.css' %}" rel="stylesheet" />
+    <style>
+          .vitinfo{color:grey}
+          i a:hover{ color: #FF0000; font-size: 20px }
+    </style>
+  </head>
+  <body>
+    <div class="s130">
+      <form id="searchform" action="{% url 'searchview' %}" method="get" accept-charset="utf-8">
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+              </svg>
+            </div>
+            <input id="search" name="s" type="text" placeholder="Search Symptom" />
+          </div>
+          <div class="input-field second-wrap">
+            <button class="btn-search" type="button">SEARCH</button>
+          </div>
+        </div>
+        <span class="info"></span>
+        <!--##### RESULT #####-->
+        {% for result in result %}
+          {% if userstr == result.symptom.lower %}
+        <div class="row" style="padding: 5px; background-color: white; text-align: center; border-radius: 100px; margin-top: 15px;">
+          <span style="color: grey;"><i>searched for</i> >>> <b style="color:red">{{ result.symptom }}</b></span>
+            <h1><a href="{% url 'ontclass' result.e %}" style="text-decoration:None; text-shadow:3px 3px grey; color: black; font-weight:bolder; border:1px;">{{ result.deflabel }}</a></h1>
+            <i><a href="{% url 'ontclass' result.e %}" class="vitinfo" style="text-decoration:None; font-weight:bolder; border:1px;">Click For More Details About {{ result.vitlabel }}</a></i>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <div style="text-align:center; margin-top: 30px;">
+        <p><a style="margin-top:50px; padding:10px; font-weight:bolder; border-radius:100px; text-shadow:1px 1px red; text-decoration:None; background-color:white;" href="{% url 'category' %}">Click Here To View Various Vitamins And Their Info</a></p>
+        </div>
+      </form>
+    </div>
+    <script src="{% static 'js/extention/choices.js' %}"></script>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

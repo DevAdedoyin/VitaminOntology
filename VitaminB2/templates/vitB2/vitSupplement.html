@@ -1,0 +1,15 @@
+{% extends 'search/layout.html' %}
+{% block content %}
+<body>
+ <h1 style="font-weight:bolder;">Vitamin B2 Supplements</h1>
+
+ {% for supplement in supplement %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; border: 2px solid black; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+       <a href="#" style="font-size: 35px; font-weight: bolder;">{{ supplement.supplabel }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+</body>
+{% endblock %}

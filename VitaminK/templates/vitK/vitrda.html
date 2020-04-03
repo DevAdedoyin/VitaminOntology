@@ -1,0 +1,126 @@
+{% extends 'search/layout.html' %}
+{% block content %}
+<body>
+ <h1 style="font-weight:bolder;">RDA FOR VITAMIN K</h1>
+ <!--YOUNG CHILDREN-->
+{% for young in young %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Children 9 to 13 Years :</p>{{ young.young }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--YOUNGER CHILDREN-->
+ {% for younger in younger %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Children 4 to 8 Years :</p> {{ younger.younger }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!-- YOUNGER CHILDREN -->
+ {% for youngest in youngest %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Children 1 to 3 Years :</p> {{ youngest.youngest }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Young INFANT-->
+ {% for yi in yi %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Infants 6 to 12 Months :</p> {{ yi.yi }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--INFANT 0 T0 6 MONTHS-->
+ {% for yri in yri %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Infants 0 to 6 Months :</p> {{ yri.yri }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Lactating Adol-->
+ {% for ladol in ladol %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Lactating Adolescent :</p> {{ ladol.ladol }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Lactating Women-->
+ {% for lwom in lwom %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;">Lactating Women :</p> {{ lwom.lwom }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--MEN-->
+ {% for men in men %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Men :</p> {{ men.men }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Non Pregnant Women-->
+ {% for npw in npw %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Non Pregnant Women :</p> {{ npw.npw }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Pregnant Adolescent-->
+ {% for padol in padol %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Pregnant Adolescent :</p> {{ padol.padol }}</a>
+    </li>
+    <br>
+</ul>
+ {% endfor %}
+ <hr>
+
+<!--Pregnant Women-->
+ {% for pwom in pwom %}
+ <ul class="list" style="text-align: center; margin-left: 320px;">
+    <li style="text-align: center; width: 650px; height: 10px; padding:40px; list-style-type: none; font-weight: bolder;">
+        <a href="#" style="font-size: 35px; font-weight: bolder;"><p style="color: black;"> Pregnant Women :</p>{{ pwom.pwom }}</a>
+    </li>
+    <br>
+</ul>
+  {% endfor %}
+ <hr>
+</body>
+{% endblock %}
